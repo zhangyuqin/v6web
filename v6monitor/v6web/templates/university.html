@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>高校网站IPv6支持概况</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normal.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>高校网站IPv6支持概况</h1>
+        <div class="table-responsive" id="university">
+        </div> 
+        <div class="img-arrow">
+            <a href="/"><img src="{% static 'image/back.png'%}" alt="arrow"></a>
+        </div>   
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/second.js' %}"></script>
+</body>
+</html>

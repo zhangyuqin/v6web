@@ -1,0 +1,92 @@
+html , body{
+    
+ height:100%;
+ 
+}
+
+body{
+    background:#000;
+    color:#b6e8fb;
+    font-size: 16px;
+    font-family: "Helvetica Neue",Helvetica,"Microsoft Yahei",Arial,sans-serif;
+}
+.clear{
+    clear:both;
+}
+h1{
+    text-align: center;
+    font-size: 25px;
+}
+h1 span{
+    font-size: 12px;
+    padding-left: 20px;
+}
+.table-responsive{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #739abc;
+}
+.table{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.table-bordered {
+    border: 1px solid #739abc;
+    border-top:none;
+    border-right: none;
+   /* table-layout: fixed;*/
+}
+
+.table>thead>tr>th,.table>tbody>tr>td{
+    border-color: #000;
+    border-width: 1px;
+    padding: 2px 8px;
+}
+.table-responsive>.table>thead>tr>th,.table-responsive>.table>tbody>tr>td{
+    border-width: 3px;
+}
+.table>thead>tr>th{
+    color:#000;
+}
+.table th{
+    text-align: center;
+}
+.table>thead>tr>th:first-child{
+    border-left: none;
+}
+.table>thead>tr>th:last-child,.table>tbody>tr>td:last-child{
+    border-right: none;
+}
+
+.table-title{
+    background-color:#739aba;
+}
+.green{
+    background-color: #00b99a;
+    text-align: center;
+    color:#000;
+}
+.red{
+    background-color: #fb4050;
+    text-align: center;
+    color:#000;
+}
+.gray{
+    background-color: #9fa0a0;
+    text-align: center;
+    color:#000;
+}
+.yellow{
+    background-color: #fff100;
+    text-align: center;
+    color:#000;
+}
+.img-arrow{
+    position: absolute;
+    left: 19%;
+    top: 2%;
+    cursor: pointer;
+}
+.img-arrow img{
+    width:30px;
+}

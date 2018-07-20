@@ -1,0 +1,291 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>IPv6监测平台</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container-left">
+            <div class="container-title">
+                <h1>IPv6监测平台</h1>
+    
+                <div>
+                    <div class="title-h3" id="title-ipv6user">
+                    </div>
+                    <div class="count">
+                        <div class="left-info" id="china-ipv6per"></div>
+                        <div class="right-info">7.51亿</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="ipv6_block_total">
+                </div>
+            </div>
+            <div class="container-content">
+                <div>
+                    <h4>商业网站IPv6支持概况<span>注：全国排名前100</span></h4>
+                    <div class="table-responsive table-web" id="commercial">
+                    </div>
+                </div>    
+                <div>
+                    <h4>高校网站IPv6支持概况</h4>
+                    <div class="table-responsive table-web" id="university">
+                    </div>
+                </div>
+                <div>
+                    <h4>政府部门和各省网站IPv6支持情况</h4>         
+                    <div class="table-responsive table-gov" id="goverment">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="user-count">
+                <div class="users">
+                    <div class="user-title">全球IPv6用户数量Top10<span>单位：万</span></div>
+                    <div id="ipv6_user_rank"></div>
+                    <!-- <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-headings">
+                                <th class="user-table-title">排名</th>
+                                <th class="user-table-title">国家</th>
+                                <th class="user-table-title">用户量</th>
+                                <th class="user-table-title">比例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-contents">
+                                <td class="user-id">1</td>
+                                <td>印度</td>
+                                <td class="num">10278</td>
+                                <td class="proportion">22.00%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">2</td>
+                                <td>美国</td>
+                                <td class="num">9881</td>
+                                <td class="proportion">34.20%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">3</td>
+                                <td>巴西</td>
+                                <td class="num">2904</td>
+                                <td class="proportion">20.70%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">4</td>
+                                <td>日本</td>
+                                <td class="num">2193</td>
+                                <td class="proportion">19.10%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">5</td>
+                                <td>德国</td>
+                                <td class="num">2157</td>
+                                <td class="proportion">30.40%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">6</td>
+                                <td>英国</td>
+                                <td class="num">1171</td>
+                                <td class="proportion">19.30%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">7</td>
+                                <td>法国</td>
+                                <td class="num">1016</td>
+                                <td class="proportion">18.10%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">8</td>
+                                <td>中国</td>
+                                <td class="num">833</td>
+                                <td class="proportion">1.08%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">9</td>
+                                <td>加拿大</td>
+                                <td class="num">584</td>
+                                <td class="proportion">18.00%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">10</td>
+                                <td>比利时</td>
+                                <td class="num">505</td>
+                                <td class="proportion">49.90%</td>
+                            </tr>
+                        </tbody>
+                    </table>  -->
+                    <p>数据来源：Google</p>
+                </div>
+                <div class="clear"></div>
+                <div class="users">
+                    <div class="user-title">全球IPv6地址数量Top10<span>单位：块/32</span></div>
+                    <div id="ipv6_block">
+                        <!-- <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-headings">
+                                <th class="user-table-title">排名</th>
+                                <th class="user-table-title">国家</th>
+                                <th class="user-table-title">数量</th>
+                                <th class="user-table-title">比例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-contents">
+                                <td class="user-id">1</td>
+                                <td>美国</td>
+                                <td class="num">44453</td>
+                                <td class="proportion">20.31%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">2</td>
+                                <td>中国大陆</td>
+                                <td class="num">21321</td>
+                                <td class="proportion">9.74%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">3</td>
+                                <td>德国</td>
+                                <td class="num">17080</td>
+                                <td class="proportion">7.80%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">4</td>
+                                <td>英国</td>
+                                <td class="num">15717</td>
+                                <td class="proportion">7.18%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">5</td>
+                                <td>法国</td>
+                                <td class="num">11911</td>
+                                <td class="proportion">5.44%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">6</td>
+                                <td>日本</td>
+                                <td class="num">9476</td>
+                                <td class="proportion">4.33%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">7</td>
+                                <td>澳大利亚</td>
+                                <td class="num">8903</td>
+                                <td class="proportion">4.07%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">8</td>
+                                <td>意大利</td>
+                                <td class="num">7486</td>
+                                <td class="proportion">3.42%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">9</td>
+                                <td class="usre-country">荷兰</td>
+                                <td class="num">5833</td>
+                                <td class="proportion">2.66%</td>
+                            </tr>
+                            <tr class="table-contents">
+                                <td class="user-id">10</td>
+                                <td>韩国</td>
+                                <td class="num">5257</td>
+                                <td class="proportion">2.40%</td>
+                            </tr>
+                        </tbody>
+                    </table>  -->
+                    </div>
+                    <p>注：全球已分配IPv6地址总数:218913块/32<br />
+                        数据来源：APNIC/RIPENCC/LACNIC/ARIN/AFRINIC</p>
+                </div>
+                <div class="clear"></div>   
+                <div class="container-right-map">
+                    <div class="right-map-info">
+                        全球主要国家IPv6部署情况
+                    </div>
+                    <div class="right-map">
+                        <div class="map-block" id="map-block-us">
+                            <div class="map-content">
+                                <div class="fill-height"></div>
+                                <div class="map-user" id="us-user"></div>
+                                <div class="map-user-content" id="us-contents"></div>
+                                <div class="map-address" id="us-address"></div>
+                            </div>
+                            <div class="map-content map-country map-country-us">美国</div>
+                            <!-- <div class="map-block-universal map-num" id="us">2</div>
+                            <div class="map-block-universal map-per">35.1%</div>
+                            <div class="map-block-universal map-country">美国</div> -->
+                        </div>
+                        <div class="map-block" id="map-block-de">
+                            <div class="map-content">
+                                <div class="map-user" id="de-user"></div>
+                                <div class="map-user-content" id="de-contents"></div>
+                                <div class="map-address" id="de-address"></div>
+                                <div class="fill-height"></div>
+                            </div>
+                            <div class="map-content map-country map-country-de">德国</div>
+                        </div>
+                        <div class="map-block" id="map-block-be">
+                            <div class="map-content">
+                                <div class="fill-height"></div>
+                                <div class="map-user" id="be-user"></div>
+                                <div class="map-user-content" id="be-contents"></div>
+                                <div class="map-address" id="be-address"></div>
+                            </div>
+                            <div class="map-content map-country map-country-be">比利时</div>
+                        </div>
+                        <div class="map-block" id="map-block-br">
+                            <div class="map-content map-country map-country-br">巴西</div>
+                            <div class="map-content">
+                                <div class="map-user" id="br-user"></div>
+                                <div class="map-user-content" id="br-contents"></div>
+                                <div class="map-address" id="br-address"></div>
+                                <div class="fill-height"></div>
+                            </div>
+                        </div>
+                        <div class="map-block" id="map-block-in">
+                            <div class="map-content map-country map-country-in">印度</div>
+                            <div class="map-content">
+                                <div class="map-user" id="in-user"></div>
+                                <div class="map-user-content" id="in-contents"></div>
+                                <div class="map-address" id="in-address"></div>
+                                <div class="fill-height"></div>
+                            </div>
+                        </div>
+                        <div class="map-block" id="map-block-jp">
+                            <div class="map-content">
+                                <div class="map-user" id="jp-user"></div>
+                                <div class="map-user-content" id="jp-contents"></div>
+                                <div class="map-address" id="jp-address"></div>
+                                <div class="fill-height"></div>
+                            </div>
+                            <div class="map-content map-country map-country-jp">日本</div>
+                        </div>
+                    </div>
+                    <p>数据来源：Cisco/Google/APNIC</p>
+                </div>
+                <div class="clear"></div>   
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="img-arrow">
+            <a href="http://ipv6monitor.cnnic.cn"><img src="{% static 'image/arrow.png'%}" alt="arrow"></a>
+        </div> 
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- <script src="http://6lab.cisco.com/stats/data/users.js"></script> -->
+    <!-- <script src="http://6lab.cisco.com/stats/data/content.js"></script> -->
+    <!-- <script src="http://6lab.cisco.com/stats/data/allocation.js"></script> -->
+    <script src="{% static 'js/users.js' %}"></script>
+    <script src="{% static 'js/content.js' %}"></script>
+    <script src="{% static 'js/allocation.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

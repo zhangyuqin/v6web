@@ -1,0 +1,393 @@
+html , body{
+    
+ height:100%;
+ 
+}
+
+body{
+    background:#000 url(../image/background.png) no-repeat;
+    background-size:100% 100%;
+    color:#b6e8fb;
+    font-size: 16px;
+    font-family: "Helvetica Neue",Helvetica,"Microsoft Yahei",Arial,sans-serif;
+}
+.clear{
+    clear:both;
+}
+.container-fluid{
+    height: 100%;
+}
+h1{
+    font-size: 66px;
+    padding-left: 60%;
+}
+h3{
+    font-size: 28px;
+    margin-top: 10px;
+}
+h4{
+    font-size: 20px;
+}
+h3>span{
+    font-size: 22px;
+   /* padding-left: 10px;*/
+}
+h4>span{
+    font-size: 12px;
+    padding-left: 60px;
+}
+
+.count{
+    border: 1px solid #739aba;
+    float: right;
+    min-width: 70%;
+    margin-top: 13px;
+    line-height: 13px;
+}
+.title-h3{
+    float:left;
+}
+h3:after,.count:after{
+    clear:both;
+}
+.count .left-info{
+    float:left;
+    background-color: #739aba;
+    padding: 5px;
+    color:#000;
+}
+.count .right-info{
+    float:right;
+    padding: 5px;
+}
+.container-content{
+    margin-top: 20px;
+}
+.table-responsive{
+    border: 1px solid #739abc;
+}
+.table-web{
+    width:30%;
+}
+.table-gov{
+    width:65%;
+}
+.container-content .table{
+    cursor:pointer;
+}
+.table{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.table-bordered {
+    border: 1px solid #739abc;
+    border-top:none;
+    border-right: none;
+    table-layout: fixed;
+}
+
+.table>thead>tr>th,.table>tbody>tr>td{
+    border-color: #000;
+    border-width: 1px;
+    padding: 2px 8px;
+}
+.table-responsive>.table>thead>tr>th,.table-responsive>.table>tbody>tr>td{
+    border-width: 3px;
+}
+.table>thead>tr>th{
+    color:#000;
+}
+.table th{
+    text-align: center;
+}
+.table>thead>tr>th:first-child{
+    border-left: none;
+}
+.table>thead>tr>th:last-child,.table>tbody>tr>td:last-child{
+    border-right: none;
+}
+.table-title{
+    background-color:#739aba;
+}
+.green{
+    background-color: #00b99a;
+    text-align: center;
+    color:#000;
+}
+.red{
+    background-color: #fb4050;
+    text-align: center;
+    color:#000;
+}
+.gray{
+    background-color: #9fa0a0;
+    text-align: center;
+    color:#000;
+}
+.yellow{
+    background-color: #fb4050;
+    text-align: center;
+    color:#000;
+}
+/*左侧表格th固定宽度*/
+#gov-url{
+    width: 150px;
+}
+#gov-org{
+    width: 295px;
+}
+.gov-web{
+    width: 110px;
+}
+.normal-url{
+    width:125px;
+}
+.normal-org{
+    width:190px;
+}
+.container-left{
+    float:left;
+    width: 65%
+}
+.container-right{
+    float:right;
+    width:29%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.container-right img{
+    width:100%;
+}
+.users{
+    float:right;
+    border: 1px solid #44b4cd;
+    width: 57%;
+}
+/*.users>.table-bordered {
+    border:none;
+}*/
+.user-title{
+    font-size: 18px;
+    padding: 2px 5px 2px 20px;
+    background-color: #44b4cd;
+    color:#000;
+    margin-bottom: 2px;
+}
+.user-title span{
+    font-size: 12px;
+    float: right;
+    margin-top:12px;
+}
+.user-table-title{
+    background-color:#44b4cd;
+    color:#000; 
+}
+.user-id{
+    text-align: center;
+}
+.proportion{
+    text-align: right;
+}
+.num{
+    text-align: right;
+}
+.users .table tbody{
+    color:#44b4cd;
+}
+.users p{
+    font-size: 12px;
+    color:#44b4cd;
+    margin:10px 0 10px 10px;
+}
+.container-right-map{
+    width:82%;
+    float:right;
+    margin-top: 15px;
+    border: 1px solid #44b4cd;
+}
+.container-right-map p{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.right-map-info{
+    font-size: 18px;
+    background-color:#44b4cd;
+    color:#000;
+    padding: 3px 0;
+    text-align: center;
+}
+.right-map{
+    background:url(../image/map.png);
+    background-size:100% 100%;
+    padding-bottom: 56.6%;
+    position: relative;
+   /* cursor: pointer;*/
+}
+.map-block{
+    width:140px;
+    position: absolute;
+    font-size: 12px;
+   /* padding-top: 20px;*/
+    color:#0d3f65;
+}
+#map-block-us{
+   top:49%;
+   left:1%; 
+}
+#map-block-de{
+   top:8%;
+   left:13%; 
+}
+#map-block-be{
+   top:29%;
+   left:33%; 
+}
+#map-block-br{
+   top:72%;
+   left:32%; 
+}
+#map-block-in{
+    top:46%;
+    left:68%;
+}
+#map-block-jp{
+   top:21%;
+   left:65%; 
+}
+
+.map-block .map-content{
+    float:left;
+    width:120px;
+}
+.map-block .map-country{
+    background: #f4cc9c;
+    width: 20px;
+    padding: 10px 2px;
+    font-size:14px;
+}
+.map-block .map-country-us,.map-block .map-country-be{
+    background:linear-gradient(-220deg, transparent 7px, #f4cc9c 0);
+}
+.map-block .map-country-jp,.map-block .map-country-de{
+    background:linear-gradient(-310deg, transparent 7px, #f4cc9c 0);
+}
+.map-block .map-country-in,.map-block .map-country-br{
+    background:linear-gradient(-50deg, transparent 7px, #f4cc9c 0);
+}
+.map-block .map-country-be{
+    padding: 6px 2px 0 2px;
+}
+.map-content .map-user{
+    background-color: #0d3f65;
+    opacity:0.8;
+    color:#f4cc9c;
+    padding-left: 2px;
+}
+
+.map-content .map-user-content{
+    background-color: #2ea7e0;
+    opacity:0.9;
+    padding-left: 2px;
+}
+
+.map-content .map-address{
+    background-color: #b4a2e8;
+    opacity:0.9;
+    padding-left: 2px;
+}
+
+.map-content .fill-height{
+    height: 7px;
+}
+
+#map-block-be .fill-height{
+    height: 11px;
+}
+.img-arrow{
+    position: absolute;
+    right: 30%;
+    bottom: 5%;
+    cursor: pointer;
+}
+.img-arrow img{
+    width:30px;
+}
+
+@media (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+    body{
+        background:#000 url(../image/background.png) no-repeat 69% 50%;
+        font-size: 12px;
+        background-size: 85% 100%;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h3>span{
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    h4>span{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    .count{
+        margin-top: 5px;
+    }
+    .table{
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    .table-web {
+        width: 42%;
+    }         
+    .table>thead>tr>th,.table>tbody>tr>td{
+        border-color: #000;
+        border-width: 1px;
+        padding: 1px 2px;
+    }
+    .table-gov {
+        width: 91%;
+    }  
+    /*左侧表格th固定宽度*/
+    .normal-url{
+        width:auto;
+    }
+    .normal-org{
+        width:auto;
+    } 
+    .users {
+        width: 63%;
+    }
+    .users p{
+        margin: 5px 0 5px 5px;
+    }
+    .user-title {
+        font-size: 14px;
+        padding: 3px 5px 6px 5px;
+        margin-bottom: 1px;
+    }
+    .user-title span {
+        margin-top: 8px;
+    }
+    .container-right-map{
+        width:118%;
+    }  
+
+    .img-arrow {
+        bottom: 8%;
+    } 
+@media(min-width: 1401px) {
+
+
+}

@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>全球主要国家IPv6部署状况</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- animations -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- google charts -->
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript' src="{% static 'js/morris.js' %}"></script>
+ 
+    <!-- to get the data -->
+    <script type='text/javascript' src="{% static 'js/all.js' %}"></script>
+
+    <!-- scripts to display the charts -->
+    <script type='text/javascript' src="{% static 'js/maps.js' %}"></script>
+
+    <!-- used to display the first map -->
+    <script type="text/javascript">
+        google.load('visualization', '1', {'packages': ['corechart', 'geochart','treemap']});
+        google.setOnLoadCallback(initMap()); // evyncke: this seems useless because it is called twice (and generates an error as the container is not yet created)
+    </script>
+
+     <script type="text/javascript">
+        $(document).ready(function() {
+            initMap('all');
+        });
+
+    </script>
+    <style>
+        body{
+   
+             font-family: "Helvetica Neue",Helvetica,"Microsoft Yahei",Arial,sans-serif;
+        }                  
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="page-wrapper" >
+        <h1 style="text-align: center;">全球主要国家IPv6部署情况</h1>
+            <!-- Map containers -->
+        <div id="mapContent">
+            <div align="center" id="geochart_container">
+                <!-- Map container -->
+                <div id="geochart_div" style="width:100%;margin-top: 50px;"></div>
+            </div>            
+        </div>
+    </div>
+</div>
+</body>
+</html>
